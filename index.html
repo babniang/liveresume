@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV – John Doe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+  
+</head>
+<body>
+
+
+  <div id="main-content">
+    <div class="main-container">
+      <main class="content">
+        <div class="profile-header">
+          
+          <img src="assets/avatar.jpg" alt="John Doe" class="profile-avatar" />
+          <h1 class="profile-name">John Doe</h1>
+          <h2 class="profile-title">Software Engineer</h2>
+          <div class="contact-info">
+            <a href="mailto:john.doe@email.com" aria-label="Email">john.doe@email.com</a>
+            <a href="https://linkedin.com/in/john-doe" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <img src="assets/linkedinIcon.png" alt="LinkedIn for John Doe" style="height: 44px; width: 44px;" />
+            </a>
+          </div>
+        </div>
+
+        
+        <div id="dynamic" class="tab-content" style="padding: 0;">
+          <div class="dynamic-wrapper">
+            <h2 class="section-title" data-i18n="title_interactive" style="margin-bottom: 1.5rem;">CV interactif</h2>
+
+            
+            <div class="resume-card">
+              <h3 data-i18n="title_education">Formation</h3>
+              <ul>
+                <li data-i18n="placeholder_education">Bachelor of Science – Engineering (2020–2023)</li>
+              </ul>
+            </div>
+
+            
+            <h2 class="section-title" data-i18n="title_experiences">Expériences professionnelles</h2>
+            <div class="resume-card">
+              <h3 data-i18n="placeholder_exp_title">Intern – ExampleCorp</h3>
+              <p data-i18n="placeholder_exp_desc">Worked on internal tools and data analysis.</p>
+              <button onclick="openModal('modal-experience1')" class="btn-learn-more cta-animated" data-i18n="btn_learn_more">En savoir plus</button>
+            </div>
+
+            
+            <h2 class="section-title" data-i18n="title_certifications">Certifications</h2>
+            <div class="resume-card">
+              <ul>
+                <li data-i18n="placeholder_cert">Certified Data Analyst</li>
+              </ul>
+            </div>
+
+            
+            <h2 class="section-title" data-i18n="title_skills">Compétences</h2>
+            <div class="resume-card">
+              <ul>
+                <li data-i18n="placeholder_skill">Python</li>
+              </ul>
+            </div>
+
+            
+            <h2 class="section-title" data-i18n="title_interests">Centres d'intérêt</h2>
+            <div class="resume-card">
+              <ul>
+                <li data-i18n="placeholder_interest">Photography</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        
+        <div id="pdf" class="tab-content" style="padding: 0;">
+          <div class="pdf-section-header">
+            <h2 class="section-title" data-i18n="title_pdf" style="margin: 0;">Version PDF</h2>
+            <a href="assets/resume.pdf" target="_blank" class="btn-download-pdf" data-i18n="btn_download_pdf">Télécharger en PDF</a>
+          </div>
+          <iframe 
+            src="assets/resume.pdf"
+            type="application/pdf"
+            width="100%" 
+            height="1200px"
+            style="border: none; min-height: 100vh;"
+            title="John Doe Resume PDF Viewer">
+            Ce navigateur ne prend pas en charge l'affichage des PDF. 
+            <a href="assets/resume.pdf" download class="btn-download-pdf" data-i18n="link_download_cv">Télécharger le CV en PDF</a> à la place.
+          </iframe>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  
+  <div id="modal-experience1" class="modal hidden" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; align-items: center; justify-content: center; z-index: 1001;">
+    <div class="modal-content-animated">
+      <h3 data-i18n="placeholder_modal_title" style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700;">Intern – ExampleCorp</h3>
+      <ul class="modal-list">
+        <li data-i18n="placeholder_modal_resp1">Assisted in data analysis</li>
+        <li data-i18n="placeholder_modal_resp2">Prepared monthly reports</li>
+      </ul>
+      <button class="close-modal modal-close-btn" onclick="closeModal('modal-experience1')" data-i18n="btn_close">Fermer</button>
+    </div>
+  </div>
+
+
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Built by <strong>Babacar Niang</strong> — <a href="https://github.com/baboupic/LiveResume" target="_blank">GitHub</a></p>
+      <div class="footer-controls">
+        <button id="darkModeToggle">
+          <img src="assets/darkmodeicon.png" alt="Toggle Dark Mode" style="height: 16px;">
+        </button>
+        <select id="languageSelector">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" title="Back to Top">↑</button>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
