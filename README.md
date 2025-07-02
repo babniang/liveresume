@@ -39,7 +39,7 @@ LiveResume/
 1. **Clone or download the repository**
 
 ```bash
-git clone https://github.com/your-username/liveresume.git
+git clone https://github.com/babniang/liveresume.git
 cd liveresume
 ```
 
